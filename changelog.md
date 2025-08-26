@@ -1,5 +1,19 @@
 ## Changelogs
 
+**v2.0 - 20250826**
+1. Fully fixed the control center animation stutter/slow-motion issue on A15 HyperOS 2.
+2. Merged the latest EEVDF fix patchset from Linux mainline.
+3. Further complement upstream scheduler backports to improve smoothness and power consumption.
+4. Corrected thermal pressure awareness in the lmh_dcvs driver by picking a patch from msm-5.15.
+5. Optimized tapered DVFS headroom to make better decisions based on CPU capacity and utilization.
+6. Dropped changes made for the DynamIQ Shared Unit due to power consumption and performance issues.
+7. Reverted qcacld-3.0 trimming to fix WiFi speed display and speed test issues.
+8. Restored Swappiness to 100% to better handle memory pressure under HyperOS.
+9. Re-backported RCU from android12-5.4-lts to complement some missing commits.
+10. Updated Binder to the latest state of android13-5.10-lts.
+11. Switched KernelSU variant to SukiSU-Ultra (`nongki` branch).
+12. And more optimizations, adjustments and fixes.
+
 **v1.1 - 20250601**
 
 1. Basically fixed control center animation drop/slow motion issues on A15 HyperOS 2.
